@@ -1,0 +1,66 @@
+.gfg {
+    margin: 3%;
+    position: relative;
+}
+
+.first-txt {
+    position: absolute;
+    top: 17px;
+    left: 50px;
+}
+
+.second-txt {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    opacity: 0;
+    color: red;
+    background-color: black;
+}
+
+.img:hover .second-txt {
+    opacity: 1;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.container:hover .image {
+    opacity: 1;
+}
+
+.container:hover .middle {
+    opacity: 1;
+}
+
+.text {
+    background-color: #04AA6D;
+    color: white;
+}
+
+
+/* .second-txt:hover {
+    background-color: aqua;
+} */

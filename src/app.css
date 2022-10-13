@@ -1,0 +1,18 @@
+.cards_div{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+    margin-top: 50px;
+
+}
+.sort_div{
+    width:100%;
+    height:40px;
+}
+.menu_div{
+    border: 1px solid rgb(210, 210, 210);
+    width: fit-content;
+    margin: 20px 20px;
+    padding:0px 20px;
+}

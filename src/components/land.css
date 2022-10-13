@@ -1,0 +1,90 @@
+.land_main{
+    height:600px;
+    background: url("../img/back.gif");
+    background-repeat: no-repeat;
+    background-color: rgb(0,0,0,.2);
+    background-position: center;
+    background-size: cover;
+    position:relative;
+    padding: 80px 150px;
+    
+}
+.tags_div{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.miniTag_div{
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: rgb(0,0,0,.7);
+    color:white;
+    border-radius: 30px;
+    width: fit-content;
+}
+.miniTag_div:hover{
+    background-color: rgb(222, 222, 222);
+    color:black;
+    cursor: pointer;
+}
+.miniTag_div.active{
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: rgb(222, 222, 222);
+    color:black;
+    border-radius: 30px;
+    width: fit-content;
+}
+.text_div{
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 90px;
+}
+.text_div h3{
+    font-size: 40px;
+    color:white;
+}
+.text_div p{
+    font-size: 18px;
+    color:white;
+}
+.search_div{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: white;
+    padding:15px 10px;
+    border-radius: 30px;
+    margin-top: 50px;
+}
+.search_input{
+    height: 25px;
+    width:500px;
+    margin-left: 20px;
+    outline: none;
+    border: none;
+
+}
+.search_input::placeholder{
+    font-size: 16px;
+    margin-top: 5px;
+}
+.search_icon{
+    font-size: 20px;
+    margin-left: 10px;
+}
+.back{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 600px;
+    width:100%;
+    background-color: rgb(0,0,0,0.5);
+    z-index: 10;
+}
+.main{
+    position: relative;
+    z-index: 11;
+}

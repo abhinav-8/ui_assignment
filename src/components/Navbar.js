@@ -3,7 +3,7 @@ import SearchIcon from '@mui/icons-material/Search';
 
 function Navbar() {
   return (
-    <div className='flex justify-between'>
+    <div className='flex justify-between py-[10px] px-[10px]'>
     <div className='flex items-center w-[900px] font-bold '>
       <h2 className='font-bold text-xl'>dribbble</h2>
       <ul className='flex flex-1 text-gray-600 justify-between ml-8 w-[1%] '>  
@@ -27,12 +27,12 @@ function Navbar() {
         </li>        
       </ul>
       </div>
-        <div className='flex items-center justify-evenly w-[13%]'>
+        <div className='flex items-center justify-evenly w-[20%]'>
         
         <SearchIcon className='h4'/>
         <button className='text-gray-600'>Sign in</button>
     
-        <button className='px-[4px] py-[4px] bg-pink-500 text-white font-bold rounded-md hover:bg-pink-400' margin='right'>Share my work</button>
+        <button className='ml-[10px] px-[4px] py-[4px] bg-pink-500 text-white font-bold rounded-md hover:bg-pink-400' margin='right'>Share my work</button>
         </div>
     
     </div>
