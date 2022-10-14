@@ -7,123 +7,190 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import "./app.css";
 function App() {
-  const [tag, setTag] = useState("");
-  const [allCardData, setAllCardData] = useState([
+  let [tag, setTag] = useState("");
+  let [allCardData, setAllCardData] = useState([
+   
     {
-      name: "Abhinav",
-      tag: "Animation",
-      likes: 10,
-      views: 450,
-      desc: "abcdef",
-    },
-    {
-      name: "Abhinav",
+      name: "Adobe MAX",
       tag: "Branding",
-      likes: 1,
-      views: 100,
+      likes: 983,
+      views: 12,
       desc: "abcdef",
+      url: "https://www.intrepidtravel.com/adventures/wp-content/uploads/2019/03/Intrepid-Travel-ecuador_amazon-jungle-river.jpg",
     },
+
     {
-      name: "Abhinav",
-      tag: "Illustration",
-      likes: 800,
-      views: 1300,
-      desc: "abcdef",
-    },
-    {
-      name: "Abhinav",
-      tag: "Mobile",
-      likes: 60,
-      views: 900,
-      desc: "abcdef",
-    },
-    {
-      name: "Abhinav",
+      name: "Mako Tsereteli",
       tag: "Print",
-      likes: 40,
-      views: 1200,
+      likes: 773,
+      views: 139,
       desc: "abcdef",
+      url: "https://imgnew.outlookindia.com/public/uploads/articles/2022/1/14/snowfall_1_20220111.jpg"
     },
     {
-      name: "Abhinav",
+      name: "Odama",
       tag: "Product Design",
-      likes: 40,
+      likes: 400,
       views: 1200,
       desc: "abcdef",
+      url: "https://c4.wallpaperflare.com/wallpaper/376/1000/968/nature-full-size-desktop-7680x4320-wallpaper-preview.jpg",
     },
     {
-      name: "Abhinav",
+      name: "twintrick",
+      tag: "Product Design",
+      likes: 280,
+      views: 912,
+      desc: "abcdef",
+      url: "https://uttarakhandtourism.gov.in/sites/default/files/2021-11/Banner_Kedarnath.jpg"
+    },
+    {
+      name: "SLAB",
+      tag: "Product Design",
+      likes: 190,
+      views: 921,
+      desc: "abcdef",
+      url: "https://admin.banbanjara.com/public/frontend/uploads/product/1577702576843-KedarkanthaTrekBanBanjara.jpg",
+    },
+    {
+      name: "Plainthing Studio",
       tag: "Typography",
-      likes: 40,
+      likes: 187,
       views: 1200,
       desc: "abcdef",
+      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxYBWZ1d9X6gQHjkJms1fWs6aRTlrOYd6A5Q&usqp=CAU",
     },
     {
-      name: "Abhinav",
+      name: "Abdul Gaffar",
+      tag: "Typography",
+      likes: 180,
+      views: 193,
+      desc: "abcdef",
+      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJnVq4Is2DVpFU-pDm57msRPSxSrYUGk7pig&usqp=CAU",
+    },
+    {
+      name: "Fireart Studio",
+      tag: "Typography",
+      likes: 160,
+      views: 453,
+      desc: "abcdef",
+      url: "http://img.emg-services.net/htmlpages/htmlpage2798/untitled-design-32.jpg",
+    },
+    {
+      name: "Taras Migulko",
       tag: "Web Design",
-      likes: 40,
+      likes: 152,
       views: 1200,
       desc: "abcdef",
+      url: "https://www.hdwallpapers.in/download/chrysler_300c_full_size_car_luxury_car_sedan_hd_cars-1920x1080.jpg",
+    },
+    {
+      name: "Irakli Meskhi",
+      tag: "Web Design",
+      likes: 98,
+      views: 136,
+      desc: "abcdef",
+      url: "https://partnersinfire.com/wp-content/uploads/2021/04/Untitled-design-5.png",
+    },
+    {
+      name: "Morva",
+      tag: "Web Design",
+      likes: 95,
+      views: 702,
+      desc: "abcdef",
+      url:"https://static.toiimg.com/photo/imgsize-152902,msid-91729099/91729099.jpg",
     },
   ]);
-  const [cardData, setCardData] = useState([
+  let [cardData, setCardData] = useState([
     {
-      name: "Abhinav",
-      tag: "Animation",
-      likes: 10,
-      views: 450,
-      desc: "abcdef",
-    },
-    {
-      name: "Abhinav",
+      name: "Adobe MAX",
       tag: "Branding",
-      likes: 1,
-      views: 100,
+      likes: 983,
+      views: 12,
       desc: "abcdef",
+      url: "https://www.intrepidtravel.com/adventures/wp-content/uploads/2019/03/Intrepid-Travel-ecuador_amazon-jungle-river.jpg",
     },
+
     {
-      name: "Abhinav",
-      tag: "Illustration",
-      likes: 800,
-      views: 1300,
-      desc: "abcdef",
-    },
-    {
-      name: "Abhinav",
-      tag: "Mobile",
-      likes: 60,
-      views: 900,
-      desc: "abcdef",
-    },
-    {
-      name: "Abhinav",
+      name: "Mako Tsereteli",
       tag: "Print",
-      likes: 40,
-      views: 1200,
+      likes: 773,
+      views: 139,
       desc: "abcdef",
+      url: "https://imgnew.outlookindia.com/public/uploads/articles/2022/1/14/snowfall_1_20220111.jpg"
     },
     {
-      name: "Abhinav",
+      name: "Odama",
       tag: "Product Design",
-      likes: 40,
+      likes: 400,
       views: 1200,
       desc: "abcdef",
+      url: "https://c4.wallpaperflare.com/wallpaper/376/1000/968/nature-full-size-desktop-7680x4320-wallpaper-preview.jpg",
     },
     {
-      name: "Abhinav",
+      name: "twintrick",
+      tag: "Product Design",
+      likes: 280,
+      views: 912,
+      desc: "abcdef",
+      url: "https://uttarakhandtourism.gov.in/sites/default/files/2021-11/Banner_Kedarnath.jpg"
+    },
+    {
+      name: "SLAB",
+      tag: "Product Design",
+      likes: 190,
+      views: 921,
+      desc: "abcdef",
+      url: "https://admin.banbanjara.com/public/frontend/uploads/product/1577702576843-KedarkanthaTrekBanBanjara.jpg",
+    },
+    {
+      name: "Plainthing Studio",
       tag: "Typography",
-      likes: 40,
+      likes: 187,
       views: 1200,
       desc: "abcdef",
+      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxYBWZ1d9X6gQHjkJms1fWs6aRTlrOYd6A5Q&usqp=CAU",
     },
     {
-      name: "Abhinav",
+      name: "Abdul Gaffar",
+      tag: "Typography",
+      likes: 180,
+      views: 193,
+      desc: "abcdef",
+      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJnVq4Is2DVpFU-pDm57msRPSxSrYUGk7pig&usqp=CAU",
+    },
+    {
+      name: "Fireart Studio",
+      tag: "Typography",
+      likes: 160,
+      views: 453,
+      desc: "abcdef",
+      url: "http://img.emg-services.net/htmlpages/htmlpage2798/untitled-design-32.jpg",
+    },
+    {
+      name: "Taras Migulko",
       tag: "Web Design",
-      likes: 40,
+      likes: 152,
       views: 1200,
       desc: "abcdef",
+      url: "https://www.hdwallpapers.in/download/chrysler_300c_full_size_car_luxury_car_sedan_hd_cars-1920x1080.jpg",
     },
-  ]);
+    {
+      name: "Irakli Meskhi",
+      tag: "Web Design",
+      likes: 98,
+      views: 136,
+      desc: "abcdef",
+      url: "https://partnersinfire.com/wp-content/uploads/2021/04/Untitled-design-5.png",
+    },
+    {
+      name: "Morva",
+      tag: "Web Design",
+      likes: 95,
+      views: 702,
+      desc: "abcdef",
+      url:"https://static.toiimg.com/photo/imgsize-152902,msid-91729099/91729099.jpg",
+    },
+      ]);
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [sortAccTo, setSort] = useState("Popular");
@@ -134,11 +201,26 @@ function App() {
 
   function handleFilter(i) {
     if (i == 0) {
+      console.log(cardData, "\nsad")
       const temparr = [...cardData];
-      temparr.sort((a, b) => {
+      cardData.sort((a, b) => {
         return b.likes - a.likes;
       });
-      setCardData(temparr);
+
+      console.log(temparr, "\n temp arr\n");
+
+      // setCardData([]);
+
+      
+      // for (let i = 0; i < temparr.length; i++) {
+      //   cardData[i] = temparr[i];
+      // }
+
+      // setTimeout(async () => {
+        setCardData(cardData);
+      // }, 3000)
+
+      console.log(cardData, "\n card\n")
     }
     if (i == 1) {
       const temparr = [...cardData];
@@ -147,7 +229,7 @@ function App() {
       });
       setCardData(temparr);
     }
-    if (i == 3) {
+    if (i == 2) {
       const temparr = [...cardData];
       temparr.filter();
     }
@@ -213,7 +295,9 @@ function App() {
       <div className="cards_div">
         {cardData &&
           cardData.map((d, index) => (
+            
             <div key={index}>
+              {console.log(index, " index\n")}
               <Card data={d} />
             </div>
           ))}

@@ -59,6 +59,15 @@
     background-color: #04AA6D;
     color: white;
 }
+.cardBottom{
+    display: inline;
+    /* align-items: center; */
+    float: left;
+    background-color: white;
+    /* padding:15px 10px; */
+    /* border-radius: 30px; */
+    /* margin-top: 50px; */
+}
 
 
 /* .second-txt:hover {
