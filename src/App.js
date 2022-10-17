@@ -9,11 +9,10 @@ import "./app.css";
 function App() {
   let [tag, setTag] = useState("");
   let [allCardData, setAllCardData] = useState([
-   
     {
       name: "Adobe MAX",
       tag: "Branding",
-      likes: 983,
+      likes: 93,
       views: 12,
       desc: "abcdef",
       url: "https://www.intrepidtravel.com/adventures/wp-content/uploads/2019/03/Intrepid-Travel-ecuador_amazon-jungle-river.jpg",
@@ -98,13 +97,37 @@ function App() {
       views: 702,
       desc: "abcdef",
       url:"https://static.toiimg.com/photo/imgsize-152902,msid-91729099/91729099.jpg",
+    },
+    {
+      name: "Lucian Radu",
+      tag: "Mobile",
+      likes: 172,
+      views: 174,
+      desc: "abcdef",
+      url: "https://photographylife.com/wp-content/uploads/2016/06/Mass.jpg",
+    },
+    {
+      name: "THRC",
+      tag: "Illustration",
+      likes: 126,
+      views: 130,
+      desc: "abcdef",
+      url: "https://wallpaperaccess.com/full/170249.jpg",
+    },
+    {
+      name: "Lucie Bajgart",
+      tag: "Animation",
+      likes: 196,
+      views: 220,
+      desc: "abcdef",
+      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVxMMdrO4jqeuE0X9ucm1hVfrT5E7FpIui4Q&usqp=CAU",
     },
   ]);
   let [cardData, setCardData] = useState([
     {
       name: "Adobe MAX",
       tag: "Branding",
-      likes: 983,
+      likes: 93,
       views: 12,
       desc: "abcdef",
       url: "https://www.intrepidtravel.com/adventures/wp-content/uploads/2019/03/Intrepid-Travel-ecuador_amazon-jungle-river.jpg",
@@ -190,6 +213,31 @@ function App() {
       desc: "abcdef",
       url:"https://static.toiimg.com/photo/imgsize-152902,msid-91729099/91729099.jpg",
     },
+    {
+      name: "Lucian Radu",
+      tag: "Mobile",
+      likes: 172,
+      views: 174,
+      desc: "abcdef",
+      url: "https://photographylife.com/wp-content/uploads/2016/06/Mass.jpg",
+    },
+    {
+      name: "THRC",
+      tag: "Illustration",
+      likes: 126,
+      views: 130,
+      desc: "abcdef",
+      url: "https://wallpaperaccess.com/full/170249.jpg",
+    },
+    {
+      name: "Lucie Bajgart",
+      tag: "Animation",
+      likes: 196,
+      views: 220,
+      desc: "abcdef",
+      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVxMMdrO4jqeuE0X9ucm1hVfrT5E7FpIui4Q&usqp=CAU",
+    },
+
       ]);
 
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -200,44 +248,31 @@ function App() {
   };
 
   function handleFilter(i) {
-    if (i == 0) {
+    if (i === 0) {
       console.log(cardData, "\nsad")
       const temparr = [...cardData];
-      cardData.sort((a, b) => {
+      temparr.sort((a, b) => {
         return b.likes - a.likes;
       });
-
-      console.log(temparr, "\n temp arr\n");
-
-      // setCardData([]);
-
-      
-      // for (let i = 0; i < temparr.length; i++) {
-      //   cardData[i] = temparr[i];
-      // }
-
-      // setTimeout(async () => {
-        setCardData(cardData);
-      // }, 3000)
-
-      console.log(cardData, "\n card\n")
+        setCardData(temparr);
     }
-    if (i == 1) {
+    if (i === 1) {
       const temparr = [...cardData];
       temparr.sort((a, b) => {
         return b.views - a.views;
       });
       setCardData(temparr);
     }
-    if (i == 2) {
+    if (i === 2) {
       const temparr = [...cardData];
+      console.log("sortby lolality");
       temparr.filter();
     }
   }
 
   const handleClose = (i) => {
     setAnchorEl(null);
-    if (i === 0) {
+    if (i === '0') {
       setSort("Popular");
       handleFilter(0);
     } else {
@@ -284,7 +319,7 @@ function App() {
                 "aria-labelledby": "basic-button",
               }}
             >
-              <MenuItem onClick={() => handleClose(0)}>Popular</MenuItem>
+              <MenuItem onClick={() => handleClose('0')}>Popular</MenuItem>
               <MenuItem onClick={() => handleClose(1)}>
                 New & Noteworthy
               </MenuItem>
@@ -297,7 +332,6 @@ function App() {
           cardData.map((d, index) => (
             
             <div key={index}>
-              {console.log(index, " index\n")}
               <Card data={d} />
             </div>
           ))}
